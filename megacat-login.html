@@ -1,0 +1,333 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Sign In</title>
+    <style>
+
+      /* General */
+
+      body {
+        margin: 0px;
+        height: 100vh;
+        position: relative;
+      }
+
+      h1 {
+        font-family: 'Bebas Neue';
+        margin: 0px;
+      }
+
+      h2, p {
+        font-family: 'Montserrat';
+        margin: 0px;
+      }
+
+      input, button {
+        font-family: 'Montserrat';
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(255, 81, 0);
+        font-family: 'Montserrat';
+      }
+
+      /* Split Background */
+
+      .main-body {
+        display: flex;
+      }
+
+      .fnaf-bg, .black-bg {
+        top: 0;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        width: 53.9%;
+      }
+
+      .fnaf-bg {
+        left: 0;
+        background-image: url(megacat-images/fnaf.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      }
+
+      .black-bg {
+        right: 0;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        background-color: #000000
+      }
+
+      /* Login Ui */
+      .login {
+        background-color: #8969FF;
+        display: flex;
+        padding: 5px;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+        border-radius: 15px;
+      }
+
+      .inner-login {
+        background-color: azure;
+        border-radius: 15px;
+      }
+
+      .upper-contents {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+      }
+
+      .welcome {
+        letter-spacing: 2px;
+      }
+
+      .sub-welcome {
+        font-weight: 300;
+        font-size: 20px;
+        color: #8969FF;
+        padding-left: 20%;
+      }
+
+      .middle-contents {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      .middle-contents input {
+        padding: 10px;
+        border-radius: 15px;
+        margin-left: 25px;
+        margin-right: 25px;
+        border-color: gray;
+      }
+
+      .email {
+        margin-bottom: 10px;
+      }
+
+      .password {
+        margin-bottom: 5px;
+      }
+
+      .change-pass {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 25px;
+      }
+
+      .change-pass a {
+        font-size: 15px;
+      }
+
+      .hori-line {
+        margin-top: 5px;
+        display: flex;
+        margin-left: 50px;
+      }
+
+      hr {
+        margin: 0 40px;
+        width: 100%;
+        height: 1%;
+        align-self: center;
+      }
+
+      .or {
+        align-self: center;
+        background-color: azure;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+        right: 50%;
+      }
+
+      .lower-contents {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .with-google {
+        display: flex;
+        width: 85%;
+        justify-content: center;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+
+      .btn-text {
+        font-weight: 300;
+      }
+
+      .btn-google {
+        width: 50px;
+      }
+
+      .submit {
+        border: none;
+        border-radius: 15px;
+        background-color: #5332ca;
+        color: white;
+        padding: 10px 0px;
+        width: 85%;
+        margin: 10px 25px;
+      }
+
+      .submit:hover {
+        background-color: #6a42f8;
+      }
+
+      .submit:active {
+        background-color: #2a1b5e;
+        color: rgb(215, 221, 226);
+      }
+
+      .soc-med {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .soc-med-text {
+        font-family: 'Montserrat';
+        font-size: 15px;
+        margin-bottom: 5px;
+        margin-left: 30px;
+      }
+
+      .soc-med-icon {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0px;
+        gap: 10px;
+        margin-top: 5px;
+        margin: 5px;
+        justify-content: center;
+      }
+
+      .icon-for-list {
+        width: 20px;
+        display: inline-block;
+      }
+
+      
+      .logo-container {
+        position: relative;
+        left: 17%;
+        top: 10px;
+      }
+
+      .logo, .mega-cat-logo {
+        width: 250px;
+      }
+
+      .mega-cat-logo {
+        position: absolute;
+        bottom: 0;
+        background-color: #1F1F1F;
+        padding: 10px;
+        border-radius: 15px 50px 30px 5px;      
+    }
+
+      @media (max-width:768px) {
+
+        .login {
+          right: 24%;
+          top: 10%;
+        }
+
+        .logo-container, .mega-cat-logo {
+          display: none;
+        }
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="main-body">
+      <div class="fnaf-bg"></div>
+      <div class="logo-container">
+        <img src="megacat-images/fnaf logo.png" alt="pit" class="logo">
+      </div>
+      <img src="megacat-images/megacat.webp" alt="megacat" class="mega-cat-logo">
+      <div class="black-bg"></div>
+        <div class="login">
+          <div class="inner-login">
+            <div class="upper-contents">
+              <h1 class="welcome">
+                WELCOME TO MEGACAT
+              </h1>
+              <h2 class="sub-welcome">
+                We Make Games!
+              </h2>
+            </div>
+            <div class="middle-contents">
+              <input type="email" id="email" class="email" placeholder="Email">
+              <input type="password" id="password" class="password" placeholder="Password">
+              <div class="change-pass">
+                <a href="#" class="for-pass">Forgot password?</a>
+              </div>
+              <div class="hori-line">
+                  <hr>
+                  <h2 class="or">or</h2>
+              </div>
+            </div>
+            <div class="lower-contents">
+                <button class="with-google">
+                  <h3 class="btn-text">Login with Google</h3>
+                  <img src="megacat-images/google.png" alt="google" class="btn-google">
+                </button>
+                <button class="submit" onclick="
+                login('davecadorna@gmail.com', '12345678')
+                ">
+                  Login
+                </button>
+                <div class="soc-med">
+                  <h3 class="soc-med-text">Don't have an account? <a href="#">Sign up</a></span></h3>
+                  <ul class="soc-med-icon">
+                    <li class="icon-list"><img src="megacat-images/facebook.png" alt="fb" class="icon-for-list"></li>
+                    <li class="icon-list"><img src="megacat-images/twitter.png" alt="twitter" class="icon-for-list"></li>
+                    <li class="icon-list"><img src="megacat-images/pinterest-logo.png" alt="" class="icon-for-list"></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+
+  <script>
+
+    function login(username, pass) {
+
+      const userEmail = document.getElementById('email').value;
+      const userPass = document.getElementById('password').value;
+
+      if(userEmail === username && userPass === pass){
+        localStorage.setItem("isLoggedIn", "true");
+        alert(`Welcome ${username}`);
+        window.location.href = "megacat.html";
+      } else {
+        alert("Wrong info or credentials");
+        console.log("Wrong info or invalid credentials")
+      }
+    }
+
+  </script>
+</html>

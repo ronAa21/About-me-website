@@ -1,0 +1,651 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Megacat</title>
+  </head>
+
+  <style>
+
+    .team-title, .vis-title, .web-title, .goal-title {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    header {
+      background-color: #1F1F1F;
+    }
+
+    body {
+      margin: 0px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    p {
+      margin-top: 0px;
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 150px;
+      height: 80px;
+    }
+
+    .left-contents, .right-contents {
+      padding-bottom: 2%;
+    }
+
+    .left-contents {
+      padding-top: 3%;
+      padding-left: 3%;
+    }
+
+    .right-contents {
+      padding-top: 3%;
+      padding-right: 3%;
+    }
+
+    .pfp {
+      width: 80px;
+      align-self: center;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .pfp:hover {
+      border-color: #8969FF; 
+      box-shadow: 0 0 8px 2px #8969FF;
+    }
+
+    .semi-header {
+      background-image: url(megacat-images/semi-head.jpg);
+      padding-bottom: 9.2%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .semi-header-position {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .web-title {
+      font-weight: bolder;
+      font-size: 100px;
+      font-family: 'Bebas Neue';
+      color: rgb(255, 254, 242);
+      margin-left: 4%;
+      padding-top: 2%;
+      margin-bottom: 5px;
+      letter-spacing: 4px;
+    }
+
+    .description {
+      font-size: 15px;
+      font-family: 'Montserrat';
+      color: rgb(255, 254, 242);
+      margin-left: 5%;
+      margin-bottom: 3%;
+    }
+
+    .side-image {
+      justify-content: flex-end;
+    }
+
+    .big-cat {
+      width: 40%;
+      position: absolute;
+      left: 60%;
+      bottom: 0;
+    }
+
+    .second-navigation {
+      background-color: #000000;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      position: sticky;
+      top: 0px;
+      z-index: 1;
+    }
+
+    .second-navi {
+      list-style-type: none;
+      text-decoration: none;
+      display: flex;
+      gap: 200px;
+      padding-left: 0px;
+    }
+
+    .sec-navi {
+      display: inline-block;
+    }
+
+    .navi {
+      font-family: 'Bebas Neue';
+      background-color: #8969FF;
+      color: #000000;
+      padding: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-radius: 50px;
+      font-size: 35px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .navi:hover, .subscribe:hover {
+      color: #e7e3e9;
+      border-color: #8969FF; 
+      box-shadow: 0 0 8px 2px #8969FF;
+      background-color: #a38aff;
+    }
+
+    .navi:active, .subscribe:active {
+      color: #d4d4d4;
+      border-color: #473783; 
+      box-shadow: 0 0 8px 2px #8969FF;
+      background-color: #806dc4; 
+    }
+
+    .mid-navigation {
+      display: flex;
+      justify-content: center;
+    }
+
+    .games {
+      padding-top: 8%;
+      background-color: #1F1F1F;
+      padding-bottom: 5%;
+    }
+
+    .upper-games, .lower-games {
+      padding-top: 5%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .up-games {
+      list-style-type: none;
+      margin: 0px;
+      display: flex;
+      padding: 0px;
+      gap: 50px;
+    }
+
+    .upper-section {
+      display: inline-block;
+    }
+
+    .upper-img-games {
+      width: 200px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      transition: bottom 1s ease;
+      bottom: 20px;
+    }
+
+    .upper-img-games:hover {
+      border-color: #8969FF; 
+      box-shadow: 0 0 8px 2px #8969FF;
+      position: relative;
+      bottom: 30px;
+    }
+
+    .lower-games {
+      margin-top: 30px;
+    }
+
+    .game-title {
+      display: flex;
+      color: #8969FF;
+      font-family: 'Bebas Neue';
+      justify-self: center;
+      font-size: 70px;
+      margin-bottom: 0px;
+      padding-top: 5%;
+    }
+
+    .vision {
+      padding-top: 10%;
+      background-color: #3f3f4b;
+      padding-bottom: 5%;
+    }
+
+    .goals-vis {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      gap: 50px;
+    }
+
+    .cols {
+      flex-direction: column;
+      justify-items: center;
+    }
+
+    .vis-title {
+      font-family: 'Bebas Neue';
+      font-size: 90px;
+      color: #e7e3e9;
+      margin-bottom: 10px;
+    }
+
+    .vis-desc {
+      font-family: 'Montserrat';
+      background-color: #1F1F1F;
+      color: #e7e3e9;
+      padding: 5%;
+      border-radius: 15px;
+    }
+
+    #mission {
+      color: #8969FF;
+    }
+
+    .main-team-grid {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      gap: 60px;
+      justify-content: center;
+    }
+
+    .team-one {
+      background-color: #8969FF;
+      padding: 5%;
+      border-radius: 15px;
+    }
+
+    .team-title {
+      display: flex;
+      color: #8969FF;
+      font-family: 'Bebas Neue';
+      font-size: 90px;
+      margin-bottom: 20px;
+      justify-self: center;
+    }
+
+    .tm-desc {
+      font-family: 'Montserrat';
+      font-size: 15px;
+    }
+
+    .tm-position {
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .tm-img {
+      width: 250px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .tm-title {
+      font-family: 'Bebas Neue';
+      font-size:25px ;
+      font-weight: bolder;
+      margin: 0px;
+      display: block;
+    }
+
+    .tm-desc {
+      margin: 0px;
+    }
+
+    .team {
+      padding-top: 11%;
+      background-color: #1F1F1F;
+      padding-bottom: 5%;
+    }
+
+    .goals {
+      background-color: #3f3f4b;
+    }
+
+    .goals-grid-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding-top: 15%;
+      padding-bottom: 10%;
+    }
+
+    .goal-grid-contents {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .goal-title {
+      font-family: 'Bebas Neue';
+      font-size: 90px;
+      margin-bottom: 10px;
+      color: #d4d4d4;
+      justify-self: center;
+      display: flex;
+    }
+
+    .goal-desc {
+      padding: 20px;
+      color: #d4d4d4;
+      font-family: 'Montserrat';
+      text-align: center;
+      justify-items: center;
+      background-color: #1F1F1F;
+      border-radius: 15px;
+    }
+
+    hr {
+      margin: 0px;
+      width: 90%;
+      justify-self: center;
+    }
+
+    footer {
+      padding-top: 10%;
+      background-color: #1F1F1F;;
+      padding-bottom: 10%;
+    }
+
+    .up-footer, .lower-footer {
+      margin-top: 15px;
+      display: flex;
+      gap: 20px;
+      justify-content: space-evenly;
+    }
+
+    .p-footer {
+      font-family: 'Montserrat';
+      font-size: 40px;
+      color: #d4d4d4;
+      margin-bottom: 15px;
+    }
+
+    input, .subscribe {
+      border: none;
+      border-radius: 15px;
+    }
+
+    input {
+      align-self: center;
+      height: 40px;
+    }
+
+    .subscribe {
+      background-color: #8969FF;
+      font-family: 'Montserrat';
+      color: #d4d4d4;
+      font-weight: 600;
+      padding: 10px;
+      align-self: center;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .support {
+      display: flex;
+      gap: 10px;
+    }
+
+    @media (max-width: 768px){
+
+    .second-navi {
+      gap: 40px;
+    }
+
+      .navi {
+        font-size: 25px;
+      }
+
+    .big-cat {
+      width: 60%;
+      position: absolute;
+      left: 55%;
+      bottom: 0;
+    }
+
+    .up-games {
+      gap: 20px;
+    }
+
+    .upper-img-games {
+      width: 150px;
+      bottom: 2px;
+    }
+
+    .upper-img-games:hover {
+      bottom: 20px;
+    }
+
+    .goals-vis {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px;
+      gap: 40px;
+    }
+
+    .main-team-grid {
+      grid-template-columns: 200px 200px 200px;
+      gap: 25px;
+    }
+
+    .tm-img {
+      width: 150px;
+    }
+
+    .team-one {
+      padding: 6%;
+    }
+
+    .goals {
+      padding: 20px;
+      gap: 40px;
+    }
+
+    .goal-title {
+      font-size: 70px;
+    }
+
+    .p-footer {
+      font-size: 30px;
+    }
+
+    }
+
+  </style>
+
+  <header>
+    <nav>
+      <div class="left-contents">
+        <img src="megacat-images/megacat.webp" alt="megacat_logo" class="logo">
+      </div>
+      <div class="right-contents">
+        <img src="megacat-images/b19ec8f4-225b-4241-9422-590d91ba5e62.jpg" alt="" class="pfp">
+      </div>
+    </nav>
+  </header>
+
+  <section class="semi-header">
+    <div class="semi-header-position">
+      <p class="web-title">
+        About us
+      </p>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam, quis<br>nostrud exercitation ullamco laboris nisi ut aliquip<br> ex ea commodo consequat.<br>
+    </p>
+    </div>
+    <div class="side-image">
+      <img src="megacat-images/pussycat.png" alt="cat_image" class="big-cat">
+    </div>
+  </section>
+
+  <section class="second-navigation">
+    <div class="mid-navigation">
+      <ul class="second-navi">
+        <li class="sec-navi"><a href="#works" class="navi">WORKS</a></li>
+        <li class="sec-navi"><a href="#vision" class="navi">VISION</a></li>
+        <li class="sec-navi"><a href="#team" class="navi">TEAM</a></li>
+        <li class="sec-navi"><a href="#goals" class="navi">GOALS</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <main>
+    <section class="works" id="works">
+      <div class="games">
+        <p class="game-title">
+          Some of&nbsp;<span style="color: #e7e3e9;">our works!</span>
+        </p>
+        <div class="upper-games">
+          <ul class="up-games">
+            <li class="upper-section"><img src="megacat-images/wrestlequest.png" alt="wrestle_quest" class="upper-img-games"></li>
+            <li class="upper-section"><img src="megacat-images/fnaf.png" alt="fnaf" class="upper-img-games"></li>
+            <li class="upper-section">
+              <img src="megacat-images/baseball.png" alt="baseball" class="upper-img-games">
+            </li>
+            <li class="upper-section">
+              <img src="megacat-images/soccer.png" alt="soccer" class="upper-img-games">
+            </li>
+          </ul>
+        </div>
+        <div class="lower-games">
+          <ul class="up-games">
+            <li class="upper-section">
+              <img src="megacat-images/echoes.png" alt="echoes" class="upper-img-games">
+            </li>
+            <li class="upper-section">
+              <img src="megacat-images/meating.png" alt="meating" class="upper-img-games">
+            </li>
+            <li class="upper-section">
+              <img src="megacat-images/renfield.png" alt="renfield" class="upper-img-games">
+            </li>
+            <li class="upper-section">
+              <img src="megacat-images/zpf.png" alt="ZPF" class="upper-img-games">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="vision" id="vision">
+    <div class="goals-vis">
+      <div class="cols">
+        <p class="vis-title" id="mission">
+        Mission
+        </p>
+        <div class="mission">
+          <p class="vis-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+            Sed do eiusmod tempor incididunt ut labore et<br>
+            dolore magna aliqua. Ut enim ad minim veniam, quis<br>
+            nostrud exercitation ullamco laboris nisi ut aliquip<br>
+            ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+      <div class="cols">
+        <p class="vis-title">
+        Vision
+        </p>
+        <div class="vis">
+          <p class="vis-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+            Sed do eiusmod tempor incididunt ut labore et<br>
+            dolore magna aliqua. Ut enim ad minim veniam, quis<br>
+            nostrud exercitation ullamco laboris nisi ut aliquip<br>
+            ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <p class="team-title">Meet our&nbsp;<span style="color: #d4d4d4;">Team!</span></p>
+    <div class="main-team-grid">
+      <div class="team-one">
+        <div class="tm-position">
+          <img src="megacat-images/ceo.png" alt="ceo" class="tm-img">
+          <p class="tm-title">James Deighan</p>
+          <p class="tm-desc">Megacat CEO</p>
+        </div>
+      </div>
+      <div class="team-one">
+        <div class="tm-position">
+          <img src="megacat-images/Dan.png" alt="" class="tm-img">
+          <p class="tm-title">Dan Lavoie</p>
+          <p class="tm-desc">Business Development Manager</p>
+        </div>
+      </div>
+      <div class="team-one">
+        <div class="tm-position">
+          <img src="megacat-images/gracey.png" alt="" class="tm-img">
+          <p class="tm-title">Gracey Maala</p>
+          <p class="tm-desc">Senior Marketing Manager</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goals" id="goals">
+    <div class="goals-grid-main">
+      <div class="goal-grid-contents">
+        <p class="goal-title"> <span style="color:#8969FF;">Goals</span></p>
+        <p class="goal-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Sed do eiusmod tempor incididunt ut labore et<br>
+          dolore magna aliqua. Ut enim ad minim veniam, quis<br>
+          nostrud exercitation ullamco laboris nisi ut aliquip<br>
+          ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="goal-grid-contents">
+        <p class="goal-title">Objective</p>
+        <p class="goal-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Sed do eiusmod tempor incididunt ut labore et<br>
+          dolore magna aliqua. Ut enim ad minim veniam, quis<br>
+          nostrud exercitation ullamco laboris nisi ut aliquip<br>
+          ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <hr>
+    <div class="up-footer">
+      <p class="p-footer">
+        LOCATION
+      </p>
+      <p class="p-footer">
+        PRODUCTS
+      </p>
+    </div>
+    <div class="lower-footer">
+      <div class="p-footer">
+        CONTACT
+      </div>
+      <div class="support">
+        <input type="text">
+        <button class="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+  </footer>
+  <style>
+
+  </style>
+</html>
